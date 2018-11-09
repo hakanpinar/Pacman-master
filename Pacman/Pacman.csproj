@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4370007E-AC06-42A7-BFA5-B4E8DA847E0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pacman</RootNamespace>
+    <AssemblyName>Pacman</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BigDot\BigDotController.cs" />
+    <Compile Include="BigDot\BigDotModel.cs" />
+    <Compile Include="BigDot\BigDotUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BigDot\BigDotUI.Designer.cs">
+      <DependentUpon>BigDotUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoorTile\DoorTileController.cs" />
+    <Compile Include="DoorTile\DoorTileUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoorTile\DoorTileUI.Designer.cs">
+      <DependentUpon>DoorTileUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enemy\EnemyController.cs" />
+    <Compile Include="Enemy\EnemyModel.cs" />
+    <Compile Include="Enemy\EnemyUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Enemy\EnemyUI.Designer.cs">
+      <DependentUpon>EnemyUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lives\LivesController.cs" />
+    <Compile Include="Lives\LivesModel.cs" />
+    <Compile Include="Lives\LivesUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lives\LivesUI.Designer.cs">
+      <DependentUpon>LivesUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameOver\GameOverController.cs" />
+    <Compile Include="GameOver\GameOverModel.cs" />
+    <Compile Include="GameOver\GameOverUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameOver\GameOverUI.Designer.cs">
+      <DependentUpon>GameOverUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadFont.cs" />
+    <Compile Include="PacDot\PacDotController.cs" />
+    <Compile Include="PacDot\PacDotModel.cs" />
+    <Compile Include="PacDot\PacDotUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PacDot\PacDotUI.Designer.cs">
+      <DependentUpon>PacDotUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player\PlayerController.cs" />
+    <Compile Include="Player\PlayerModel.cs" />
+    <Compile Include="Player\PlayerUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Player\PlayerUI.Designer.cs">
+      <DependentUpon>PlayerUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Ready\ReadyController.cs" />
+    <Compile Include="Ready\ReadyModel.cs" />
+    <Compile Include="Ready\ReadyUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ready\ReadyUI.Designer.cs">
+      <DependentUpon>ReadyUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Score\ScoreController.cs" />
+    <Compile Include="Score\ScoreModel.cs" />
+    <Compile Include="Score\ScoreUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Score\ScoreUI.Designer.cs">
+      <DependentUpon>ScoreUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Score\Tile\TileController.cs" />
+    <Compile Include="Score\Tile\TileModel.cs" />
+    <Compile Include="Score\Tile\TileUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Score\Tile\TileUI.Designer.cs">
+      <DependentUpon>TileUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="World\WorldController.cs" />
+    <Compile Include="World\WorldModel.cs" />
+    <Compile Include="World\WorldUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="World\WorldUI.Designer.cs">
+      <DependentUpon>WorldUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BigDot\BigDotUI.resx">
+      <DependentUpon>BigDotUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoorTile\DoorTileUI.resx">
+      <DependentUpon>DoorTileUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enemy\EnemyUI.resx">
+      <DependentUpon>EnemyUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lives\LivesUI.resx">
+      <DependentUpon>LivesUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver\GameOverUI.resx">
+      <DependentUpon>GameOverUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PacDot\PacDotUI.resx">
+      <DependentUpon>PacDotUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player\PlayerUI.resx">
+      <DependentUpon>PlayerUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ready\ReadyUI.resx">
+      <DependentUpon>ReadyUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Score\ScoreUI.resx">
+      <DependentUpon>ScoreUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Score\Tile\TileUI.resx">
+      <DependentUpon>TileUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="World\WorldUI.resx">
+      <DependentUpon>WorldUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="pacmanfull.png" />
+    <Content Include="Properties\pacmanLives.png" />
+    <None Include="Resources\pacmanfull.png" />
+    <None Include="Resources\wall3.png" />
+    <None Include="Resources\sixteenhundred.png" />
+    <None Include="Resources\eighthundred.png" />
+    <None Include="Resources\fourhundred.png" />
+    <None Include="Resources\doorTileEnemies.png" />
+    <None Include="Resources\enemy2down0.png" />
+    <None Include="Resources\enemy2down1.png" />
+    <None Include="Resources\enemy2left0.png" />
+    <None Include="Resources\enemy2left1.png" />
+    <None Include="Resources\enemy2right0.png" />
+    <None Include="Resources\enemy2right1.png" />
+    <None Include="Resources\enemy2up0.png" />
+    <None Include="Resources\enemy2up1.png" />
+    <None Include="Resources\enemy3down0.png" />
+    <None Include="Resources\enemy3down1.png" />
+    <None Include="Resources\enemy3left0.png" />
+    <None Include="Resources\enemy3left1.png" />
+    <None Include="Resources\enemy3right0.png" />
+    <None Include="Resources\enemy3right1.png" />
+    <None Include="Resources\enemy3up0.png" />
+    <None Include="Resources\enemy3up1.png" />
+    <None Include="Resources\enemy4down0.png" />
+    <None Include="Resources\enemy4down1.png" />
+    <None Include="Resources\enemy4left0.png" />
+    <None Include="Resources\enemy4left1.png" />
+    <None Include="Resources\enemy4right0.png" />
+    <None Include="Resources\enemy4right1.png" />
+    <None Include="Resources\enemy4up0.png" />
+    <None Include="Resources\enemy4up1.png" />
+    <EmbeddedResource Include="Resources\pacmanfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\twohundred.png" />
+    <None Include="Resources\white1.png" />
+    <None Include="Resources\white0.png" />
+    <None Include="Resources\death11.png" />
+    <None Include="Resources\death10.png" />
+    <None Include="Resources\death9.png" />
+    <None Include="Resources\death7.png" />
+    <None Include="Resources\death6.png" />
+    <None Include="Resources\death5.png" />
+    <None Include="Resources\death4.png" />
+    <None Include="Resources\death3.png" />
+    <None Include="Resources\death2.png" />
+    <None Include="Resources\death1.png" />
+    <None Include="Resources\death0.png" />
+    <None Include="Resources\wall2.png" />
+    <None Include="Resources\eyesup.png" />
+    <None Include="Resources\eyesright.png" />
+    <None Include="Resources\eyesleft.png" />
+    <None Include="Resources\eyesdown.png" />
+    <None Include="Resources\blue11.png" />
+    <None Include="Resources\blue01.png" />
+    <None Include="Resources\blue1.png" />
+    <None Include="Resources\blue0.png" />
+    <None Include="Resources\enemy1up1.png" />
+    <None Include="Resources\enemy1up0.png" />
+    <None Include="Resources\enemy1right1.png" />
+    <None Include="Resources\enemy1right0.png" />
+    <None Include="Resources\enemy1left1.png" />
+    <None Include="Resources\enemy1left0.png" />
+    <None Include="Resources\enemy1down1.png" />
+    <None Include="Resources\enemy1down0.png" />
+    <None Include="Resources\pacmanright2.png" />
+    <None Include="Resources\pacman.png" />
+    <None Include="Resources\pacmanright.png" />
+    <None Include="Resources\pacmanup1.png" />
+    <None Include="Resources\pacmanright1.png" />
+    <None Include="Resources\pacmanleft1.png" />
+    <None Include="Resources\pacmandown1.png" />
+    <None Include="Resources\pacmanup.png" />
+    <None Include="Resources\pacmanleft.png" />
+    <None Include="Resources\pacmandown.png" />
+    <None Include="Resources\pacdot.png" />
+    <None Include="Resources\bigdot.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
